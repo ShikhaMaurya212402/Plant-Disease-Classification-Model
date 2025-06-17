@@ -2,8 +2,9 @@
 
 Training a model which classify and detect the disease in plant by using training and testing dataset.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+- 🌸 Harshita made her first contribution!
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## 📝 License
 
