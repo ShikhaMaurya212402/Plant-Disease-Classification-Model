@@ -119,7 +119,7 @@ This project is licensed under the [MIT License](LICENSE) - see the LICENSE file
 Created with 💻 by ***@ShikhaMaurya212402***
 
 Feel free to reach out:
-📧 <a href="mailto:shikha.maurya212402@gmail.com">shikha.maurya212402@gmail.com</a> 🚀
+📧 <a href="mailto:shikhamaurya212402@gmail.com">shikhamaurya212402@gmail.com</a> 🚀
 
 ---
 # 🧠Stay Curious!
@@ -128,9 +128,7 @@ Want to dig deeper? Explore the code, raise an issue, or suggest a feature. Your
 ✨ Pro Tip: Every expert was once a beginner. Keep going — you've got this! 🚀
 
 ---
-<!-- <p align="center">
-⬆️ <a href="top"><strong>Back to Top</strong></a> • ⭐<a href="#"><strong>Star this Repo</strong>
-</a></p> -->
+
 ⬆️ [**Back to Top**](#) • ❤️[**Show some love**](#) • ⭐[**Star the Repo**](#)
 
 
