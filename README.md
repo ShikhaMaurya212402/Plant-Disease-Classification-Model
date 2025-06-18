@@ -31,7 +31,9 @@ This project involves training a deep learning model to detect and classify dise
 
 The model is built using a Convolutional Neural Network (CNN), a powerful architecture ideal for image classification tasks. It learns from thousands of labeled images of both healthy and diseased leaves and accurately identifies the type of disease in new, unseen images.
 
+
 With proper training and tuning, the model achieves an accuracy of 92%, demonstrating its ability to generalize well across various types of plant diseases.
+
 ---
 # 🧰Tech Stack
 - **Programming Language:** Python
@@ -108,7 +110,10 @@ Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ---
 # 📝License
+
 This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+
+
 ---
 # 📬Contact Information
 Created with 💻 by ***@ShikhaMaurya212402***
