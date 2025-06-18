@@ -1,0 +1,443 @@
+.history-item {
+    position: relative;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .history-item:hover {
+    border-color: var(--primary-green);
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .history-item--selected {
+    border-color: var(--primary-green);
+    background: var(--bg-light-green);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+  }
+  
+  .history-item--low-confidence {
+    border-left: 4px solid #FF9800;
+  }
+  
+  .history-item--grid {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .history-item--list {
+    display: grid;
+    grid-template-columns: auto 200px 1fr auto;
+    gap: 16px;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .history-item__select {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    padding: 4px;
+  }
+  
+  .history-item__checkbox {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-green);
+  }
+  
+  .history-item__image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--bg-secondary);
+  }
+  
+  .history-item--grid .history-item__image-container {
+    height: 200px;
+  }
+  
+  .history-item--list .history-item__image-container {
+    width: 180px;
+    height: 120px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  
+  .history-item__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .history-item:hover .history-item__image {
+    transform: scale(1.05);
+  }
+  
+  .history-item__image-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-light);
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+  
+  .history-item__confidence-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: white;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history-item__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .history-item:hover .history-item__overlay {
+    opacity: 1;
+  }
+  
+  .history-item__view-button {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .history-item__view-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .history-item__content {
+    padding: 16px;
+    flex: 1;
+  }
+  
+  .history-item--list .history-item__content {
+    padding: 0;
+  }
+  
+  .history-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  
+  .history-item--list .history-item__header {
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .history-item__disease-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+  }
+  
+  .history-item--list .history-item__disease-name {
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+  
+  .history-item__plant-type {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+    font-style: italic;
+  }
+  
+  .history-item__confidence-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+  
+  .confidence-meter-small {
+    width: 60px;
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .confidence-meter-small__fill {
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  
+  .confidence-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
+  .history-item__details {
+    margin-bottom: 12px;
+  }
+  
+  .history-item--list .history-item__details {
+    margin-bottom: 8px;
+  }
+  
+  .history-item__detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+  }
+  
+  .history-item__detail:last-child {
+    margin-bottom: 0;
+  }
+  
+  .history-item__detail-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+    min-width: 60px;
+  }
+  
+  .history-item__detail-value {
+    color: var(--text-primary);
+  }
+  
+  .history-item__severity {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .history-item__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .history-item__tag {
+    background: var(--bg-light-green);
+    color: var(--primary-green);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--primary-green-light);
+  }
+  
+  .history-item__tag--more {
+    background: var(--bg-secondary);
+    color: var(--text-light);
+    border-color: var(--border-color);
+  }
+  
+  .history-item__description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin: 8px 0 0 0;
+  }
+  
+  .history-item__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .history-item--list .history-item__footer {
+    border-top: none;
+    padding-top: 0;
+  }
+  
+  .history-item__timestamp {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+  
+  .history-item__timestamp-icon {
+    opacity: 0.7;
+  }
+  
+  .history-item__date {
+    font-weight: 500;
+  }
+  
+  .history-item__time {
+    opacity: 0.8;
+  }
+  
+  .history-item__actions {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .history-item__action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .history-item__action-button--view {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+  
+  .history-item__action-button--view:hover {
+    background: var(--primary-green);
+    color: white;
+  }
+  
+  .history-item__action-button--delete {
+    background: #fee;
+    color: #dc2626;
+  }
+  
+  .history-item__action-button--delete:hover {
+    background: #dc2626;
+    color: white;
+  }
+  
+  .history-item__action-button--confirm {
+    background: var(--primary-green);
+    color: white;
+  }
+  
+  .history-item__action-button--confirm:hover {
+    background: var(--secondary-green);
+  }
+  
+  .history-item__action-button--cancel {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+  
+  .history-item__action-button--cancel:hover {
+    background: var(--border-color);
+  }
+  
+  .history-item__treatment-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+    padding: 4px 8px;
+    background: var(--bg-light-green);
+    color: var(--primary-green);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--primary-green-light);
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .history-item--list {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  
+    .history-item--list .history-item__image-container {
+      width: 100%;
+      height: 150px;
+    }
+  
+    .history-item__header {
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+    }
+  
+    .history-item__confidence-info {
+      align-self: flex-end;
+    }
+  
+    .history-item__actions {
+      margin-top: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .history-item__content {
+      padding: 12px;
+    }
+  
+    .history-item__disease-name {
+      font-size: 1rem;
+    }
+  
+    .history-item__footer {
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+  
+    .history-item__actions {
+      align-self: flex-end;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .history-item {
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+  /* Focus styles for accessibility */
+  .history-item:focus {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+  }
+  
