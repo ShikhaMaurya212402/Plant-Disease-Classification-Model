@@ -1,0 +1,234 @@
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .loader--fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+  }
+  
+  .loader__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .loader__text {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  /* Spinner Loader */
+  .loader__spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loader__spinner-circle {
+    border: 3px solid var(--border-color);
+    border-top: 3px solid var(--primary-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .loader__spinner--small .loader__spinner-circle {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+  }
+  
+  .loader__spinner--medium .loader__spinner-circle {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .loader__spinner--large .loader__spinner-circle {
+    width: 48px;
+    height: 48px;
+    border-width: 4px;
+  }
+  
+  /* Dots Loader */
+  .loader__dots {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .loader__dot {
+    border-radius: 50%;
+    background: var(--primary-green);
+    animation: pulse 1.4s ease-in-out infinite both;
+  }
+  
+  .loader__dot:nth-child(1) { animation-delay: -0.32s; }
+  .loader__dot:nth-child(2) { animation-delay: -0.16s; }
+  .loader__dot:nth-child(3) { animation-delay: 0s; }
+  
+  .loader__dots--small .loader__dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .loader__dots--medium .loader__dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .loader__dots--large .loader__dot {
+    width: 14px;
+    height: 14px;
+  }
+  
+  /* Bars Loader */
+  .loader__bars {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+  }
+  
+  .loader__bar {
+    background: var(--primary-green);
+    border-radius: 2px;
+    animation: stretch 1.2s ease-in-out infinite;
+  }
+  
+  .loader__bar:nth-child(1) { animation-delay: -1.1s; }
+  .loader__bar:nth-child(2) { animation-delay: -1.0s; }
+  .loader__bar:nth-child(3) { animation-delay: -0.9s; }
+  .loader__bar:nth-child(4) { animation-delay: -0.8s; }
+  
+  .loader__bars--small .loader__bar {
+    width: 3px;
+    height: 20px;
+  }
+  
+  .loader__bars--medium .loader__bar {
+    width: 4px;
+    height: 32px;
+  }
+  
+  .loader__bars--large .loader__bar {
+    width: 6px;
+    height: 48px;
+  }
+  
+  /* Plant Loader */
+  .loader__plant {
+    animation: grow 2s ease-in-out infinite;
+  }
+  
+  .loader__plant svg {
+    color: var(--primary-green);
+  }
+  
+  .loader__plant--small svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .loader__plant--medium svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .loader__plant--large svg {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .loader__plant-leaf {
+    transform-origin: center;
+    animation: leafGrow 2s ease-in-out infinite;
+  }
+  
+  .loader__plant-stem {
+    transform-origin: bottom;
+    animation: stemGrow 2s ease-in-out infinite;
+  }
+  
+  /* Color Variants */
+  .loader__spinner--secondary .loader__spinner-circle {
+    border-top-color: var(--secondary-green);
+  }
+  
+  .loader__dots--secondary .loader__dot {
+    background: var(--secondary-green);
+  }
+  
+  .loader__bars--secondary .loader__bar {
+    background: var(--secondary-green);
+  }
+  
+  .loader__plant--secondary svg {
+    color: var(--secondary-green);
+  }
+  
+  /* Animations */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0%, 80%, 100% {
+      transform: scale(0);
+      opacity: 0.5;
+    }
+    40% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes stretch {
+    0%, 40%, 100% {
+      transform: scaleY(0.4);
+    }
+    20% {
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes grow {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes leafGrow {
+    0%, 100% {
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      transform: scale(1.2) rotate(-5deg);
+    }
+    75% {
+      transform: scale(1.2) rotate(5deg);
+    }
+  }
+  
+  @keyframes stemGrow {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(1.1);
+    }
+  }
+  

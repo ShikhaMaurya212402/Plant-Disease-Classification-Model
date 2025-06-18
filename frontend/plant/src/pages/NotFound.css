@@ -1,0 +1,128 @@
+/* src/pages/NotFound.css */
+
+/* ───────────────── container ───────────────── */
+.not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(
+      135deg,
+      var(--bg-light-green) 0%,
+      var(--bg-secondary) 100%
+    );
+  }
+  
+  .not-found__container {
+    text-align: center;
+    max-width: 600px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* decorative leaves */
+  .not-found__container::before,
+  .not-found__container::after {
+    content: "🌿";
+    position: absolute;
+    font-size: 3.5rem;
+    opacity: 0.15;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .not-found__container::before {
+    top: -20px;
+    left: -10px;
+    animation-delay: 1s;
+  }
+  
+  .not-found__container::after {
+    bottom: -20px;
+    right: -10px;
+    transform: rotate(180deg);
+  }
+  
+  /* ───────────────── 404 text ───────────────── */
+  .not-found__title {
+    font-size: 8rem;
+    font-weight: 800;
+    margin: 0 0 20px;
+    line-height: 1;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* ───────────────── message ───────────────── */
+  .not-found__message {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin: 0 0 32px;
+    line-height: 1.6;
+  }
+  
+  /* ───────────────── link button ───────────── */
+  .not-found__home-link {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--gradient-primary);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.25);
+    transition: all 0.3s ease;
+  }
+  
+  .not-found__home-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(76, 175, 80, 0.35);
+  }
+  
+  /* ───────────────── animation ─────────────── */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-15px) rotate(5deg);
+    }
+  }
+  
+  /* ───────────────── responsive ─────────────── */
+  @media (max-width: 768px) {
+    .not-found__title {
+      font-size: 5rem;
+    }
+  
+    .not-found__message {
+      font-size: 1.1rem;
+    }
+  
+    .not-found__container {
+      padding: 40px 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .not-found__title {
+      font-size: 4rem;
+    }
+  
+    .not-found__message {
+      font-size: 1rem;
+    }
+  
+    .not-found__home-link {
+      width: 100%;
+    }
+  }
+  
