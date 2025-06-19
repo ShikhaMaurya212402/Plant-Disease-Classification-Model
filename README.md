@@ -119,7 +119,7 @@ This project is licensed under the [MIT License](LICENSE) - see the LICENSE file
 Created with 💻 by ***@ShikhaMaurya212402***
 
 Feel free to reach out:
-📧 <a href="mailto:shikhamaurya212402@gmail.com">shikhamaurya212402@gmail.com</a> 🚀
+📧 <a href="mailto:shikhamaurya811@gmail.com">shikhamaurya811@gmail.com</a> 🚀
 
 ---
 # 🧠Stay Curious!
