@@ -109,7 +109,7 @@ Irrelevant submissions may be marked as invalid or closed.
 
 <div align="center">
   <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"><br>
-  <em><strong>Need help?</strong> Feel free to open an issue or reach out via email: <a href="mailto:shikha.maurya212402@gmail.com">shikha.maurya212402@gmail.com</a> 💌</em>
+  <em><strong>Need help?</strong> Feel free to open an issue or reach out via email: <a href="mailto:shikhamaurya811@gmail.com">shikhamaurya811@gmail.com</a> 💌</em>
 </div>
 
 ---
