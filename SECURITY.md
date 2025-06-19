@@ -5,7 +5,7 @@
 If you discover a security issue in this project, we kindly request that you _report it responsibly_. Please do not open public issues or disclose the vulnerability before we’ve had a chance to review and address it.
 
 You can _contact the project maintainer at_:  
-📧 *shikhamaurya212402@gmail.com*
+📧 *shikhamaurya811@gmail.com*
 
 We take all vulnerabilities seriously and will respond as quickly as possible.
 
