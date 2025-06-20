@@ -9,9 +9,12 @@ import History from './pages/History';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 import './styles/globals.css';
+import ChatbotWidget from './components/Chatbot/ChatbotWidget';
 
 function App() {
   return (
+    <>
+      <ChatbotWidget />
     <Router>
       <div className="app">
         <Header />
@@ -30,6 +33,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </>
   );
 }
 
