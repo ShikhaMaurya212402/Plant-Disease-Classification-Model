@@ -1,0 +1,93 @@
+.scroll-to-top-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+}
+
+/* Animation wrapper */
+.scroll-wrapper {
+  display: inline-block;
+}
+
+/* Animate wrapper, not the button */
+.pop-in {
+  animation: popIn 0.3s ease forwards;
+}
+
+.pop-out {
+  animation: popOut 0.3s ease forwards;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* Keep transform hover only on the button */
+.scroll-button {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background-color: #388E3C;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.scroll-button:hover {
+  transform: scale(1.1);
+}
+
+/* Existing animated border and icon */
+.animated-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: conic-gradient(#ffffff 0%, #66ff00 25%, #ffffff 50%, #66ff00 75%, #ffffff 100%);
+  animation: spin 2s linear infinite;
+  z-index: 1;
+  mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black 100%);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), black 100%);
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

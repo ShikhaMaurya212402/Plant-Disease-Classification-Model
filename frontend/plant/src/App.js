@@ -10,10 +10,12 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import './styles/globals.css';
 import ChatbotWidget from './components/Chatbot/ChatbotWidget';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <ChatbotWidget />
     <Router>
       <div className="app">
