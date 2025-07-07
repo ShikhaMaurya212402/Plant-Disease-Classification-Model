@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
+import logoo from "./LOGGO.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,18 +36,9 @@ const Header = () => {
         <div className="header__logo">
           <Link to="/" className="header__logo-link" onClick={closeMenu}>
             <div className="header__logo-icon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <path
-                  d="M16 2C13.8 2 12 3.8 12 6C12 8.2 13.8 10 16 10C18.2 10 20 8.2 20 6C20 3.8 18.2 2 16 2Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M16 12C12 12 8 14 8 18V28C8 29.1 8.9 30 10 30H22C23.1 30 24 29.1 24 28V18C24 14 20 12 16 12Z"
-                  fill="currentColor"
-                />
-              </svg>
+              <img src={logoo} alt="Logo" style={{width : "200px"}}/>
             </div>
-            <span className="header__logo-text">PlantCare</span>
+            {/* <span className="header__logo-text">PlantCare</span> */}
           </Link>
         </div>
 
