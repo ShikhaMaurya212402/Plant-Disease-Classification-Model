@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import Wlogoo from "./loggw.svg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,18 +15,9 @@ const Footer = () => {
           <div className="footer__section">
             <div className="footer__logo">
               <div className="footer__logo-icon">
-                <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                  <path
-                    d="M16 2C13.8 2 12 3.8 12 6C12 8.2 13.8 10 16 10C18.2 10 20 8.2 20 6C20 3.8 18.2 2 16 2Z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M16 12C12 12 8 14 8 18V28C8 29.1 8.9 30 10 30H22C23.1 30 24 29.1 24 28V18C24 14 20 12 16 12Z"
-                    fill="currentColor"
-                  />
-                </svg>
+                <img src={Wlogoo} alt="Logo" style={{width : "200px"}}/>
               </div>
-              <span className="footer__logo-text">PlantCare</span>
+              {/* <span className="footer__logo-text">PlantCare</span> */}
             </div>
             <p className="footer__description">
               AI-powered plant disease identification system helping farmers and gardeners maintain healthy plants.
