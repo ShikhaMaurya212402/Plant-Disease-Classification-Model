@@ -1,12 +1,11 @@
 <p align="center">
-  <img src="./frontend/plant/src/loggw.svg" alt="Logo" width="500" />
+  <img src="./frontend/plant/src/LOGG.svg" alt="Logo" width="400" />
 </p>
 
 <!-- # 🌿Plant-Disease-Classification-Model
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) -->
-<p align="center">
-# Plant-Disease-Classification-Model
-</p>
+<h2 align="center">Plant-Disease-Classification-Model</h2>
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](./LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg?style=for-the-badge)](https://www.python.org/)
