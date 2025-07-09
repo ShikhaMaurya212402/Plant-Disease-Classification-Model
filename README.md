@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./loggw.svg" alt="Logo" width="200" />
+  <img src="./frontend/plant/src/loggw.svg" alt="Logo" width="200" />
 </p>
 
 <!-- # 🌿Plant-Disease-Classification-Model
