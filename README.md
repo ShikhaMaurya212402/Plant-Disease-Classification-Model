@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./loggw.svg" alt="Logo" width="200" />
+</p>
+
 <!-- # 🌿Plant-Disease-Classification-Model
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) -->
 # 🌿 Plant-Disease-Classification-Model
