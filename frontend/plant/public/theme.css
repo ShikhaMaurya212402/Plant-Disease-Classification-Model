@@ -37,30 +37,31 @@
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
     --gradient-light: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
-  }
-  
-  /* Global Styles */
-  .theme-green {
+}
+
+/* Global Styles */
+.theme-green {
     color-scheme: light;
-  }
-  
-  .btn-primary {
+}
+
+.btn-primary {
     background: var(--gradient-primary);
     border: none;
     color: var(--text-white);
     border-radius: 8px;
     padding: 12px 24px;
-    font-weight: 500;
+    font-weight: 600; /* Increased font weight */
     transition: all 0.3s ease;
-  }
-  
-  .btn-primary:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.btn-primary:hover {
     background: var(--primary-green-dark);
     box-shadow: 0 4px 12px var(--shadow-green);
     transform: translateY(-2px);
-  }
-  
-  .btn-secondary {
+}
+
+.btn-secondary {
     background: transparent;
     border: 2px solid var(--primary-green);
     color: var(--primary-green);
@@ -68,63 +69,74 @@
     padding: 12px 24px;
     font-weight: 500;
     transition: all 0.3s ease;
-  }
-  
-  .btn-secondary:hover {
-    background: var(--primary-green);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-green-light); /* Lighter green on hover */
     color: var(--text-white);
-  }
-  
-  .card {
+}
+
+.card {
     background: var(--bg-card);
     border-radius: 12px;
     box-shadow: 0 2px 8px var(--shadow-light);
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     box-shadow: 0 4px 16px var(--shadow-green);
-    transform: translateY(-2px);
-  }
-  
-  .text-primary {
+    transform: scale(1.02); /* Scale effect on hover */
+}
+
+.text-primary {
     color: var(--primary-green) !important;
-  }
-  
-  .text-secondary {
+}
+
+.text-secondary {
     color: var(--text-secondary) !important;
-  }
-  
-  .bg-primary {
+}
+
+.bg-primary {
     background-color: var(--primary-green) !important;
-  }
-  
-  .bg-light-green {
+}
+
+.bg-light-green {
     background-color: var(--bg-light-green) !important;
-  }
-  
-  .border-primary {
+}
+
+.border-primary {
     border-color: var(--primary-green) !important;
-  }
-  
-  /* Utility Classes */
-  .gradient-bg {
+}
+
+/* Utility Classes */
+.gradient-bg {
     background: var(--gradient-primary);
-  }
-  
-  .gradient-text {
+}
+
+.gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
-  
-  .rounded-lg {
+}
+
+.rounded-lg {
     border-radius: 12px;
-  }
-  
-  .shadow-green {
+}
+
+.shadow-green {
     box-shadow: 0 4px 12px var(--shadow-green);
-  }
-  
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
