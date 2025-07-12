@@ -1,15 +1,24 @@
+<p align="center">
+  <img src="./frontend/plant/src/LOGG.svg" alt="Logo" width="400" />
+</p>
+
 <!-- # 🌿Plant-Disease-Classification-Model
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) -->
-# 🌿 Plant-Disease-Classification-Model
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](./LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10-blue.svg?style=for-the-badge)](https://www.python.org/)
-![FRAMEWORK](https://img.shields.io/badge/FRAMEWORK-TENSORFLOW-orange?style=flat-square&logo=tensorflow&logoColor=white)
-![FRAMEWORK](https://img.shields.io/badge/FRAMEWORK-STREAMLIT-ff4b4b?style=flat-square&logo=streamlit&logoColor=white)
+<h2 align="center">Plant-Disease-Classification-Model</h2>
 
 
+<p align="center">
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT" />
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3.10-blue.svg?style=for-the-badge" alt="Python 3.10" />
+  </a>
+  <img src="https://img.shields.io/badge/FRAMEWORK-TENSORFLOW-orange?style=for-the-badge&logo=tensorflow&logoColor=white" alt="Framework: TensorFlow" />
+  <img src="https://img.shields.io/badge/FRAMEWORK-STREAMLIT-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white" alt="Framework: Streamlit" />
+  <img src="https://img.shields.io/badge/Made%20with-💚%20Love-red?style=for-the-badge" alt="Made with Love" />
+</p>
 
-[![Made With](https://img.shields.io/badge/Made%20with-💚%20Love-red?style=for-the-badge)](#)
 
 ---
 # 📌Table of content

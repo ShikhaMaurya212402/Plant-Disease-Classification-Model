@@ -170,3 +170,19 @@
     }
   }
   
+
+.footer__link,
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer__link-icon,
+.footer__contact-icon {
+  flex-shrink: 0;
+}
