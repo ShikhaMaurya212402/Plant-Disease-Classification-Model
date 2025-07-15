@@ -5,6 +5,7 @@
     padding: 24px;
     background: var(--bg-primary);
     min-height: 100vh;
+    margin-top: 4.5rem;
   }
   
   .history-page--loading,
