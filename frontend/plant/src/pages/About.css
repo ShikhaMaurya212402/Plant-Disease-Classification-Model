@@ -163,3 +163,6 @@
     .contact__button{width:100%;}
   }
   
+.tabs__container{
+  display: contents;
+}  
