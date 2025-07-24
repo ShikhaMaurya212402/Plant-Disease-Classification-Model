@@ -18,7 +18,7 @@ const Classify = () => {
     setIsAnalyzing(true);
     setAnalysisError(null);
     setCurrentStep('analyzing');
-    
+
     try {
       // Simulate progress
       for (let progress = 0; progress <= 100; progress += 10) {
@@ -112,7 +112,7 @@ const Classify = () => {
   const handleImageSelect = useCallback(async (images) => {
     const imageArray = Array.isArray(images) ? images : [images];
     setSelectedImages(imageArray);
-    
+
     if (imageArray.length > 0) {
       await classifyImage(imageArray[0].file);
     }
@@ -148,22 +148,22 @@ const Classify = () => {
           </div>
           <span className="step__label">Upload Image</span>
         </div>
-        
+
         <div className="step__connector">
           <div className={`connector__line ${currentStep !== 'upload' ? 'connector__line--active' : ''}`}></div>
         </div>
-        
+
         <div className={`step ${currentStep === 'analyzing' ? 'step--active' : currentStep === 'results' ? 'step--completed' : ''}`}>
           <div className="step__icon">
             {currentStep === 'analyzing' ? '🔄' : currentStep === 'results' ? '✅' : '🧠'}
           </div>
           <span className="step__label">AI Analysis</span>
         </div>
-        
+
         <div className="step__connector">
           <div className={`connector__line ${currentStep === 'results' ? 'connector__line--active' : ''}`}></div>
         </div>
-        
+
         <div className={`step ${currentStep === 'results' ? 'step--active' : ''}`}>
           <div className="step__icon">📊</div>
           <span className="step__label">Results</span>
@@ -198,7 +198,7 @@ const Classify = () => {
                 multiple={false}
                 disabled={isAnalyzing}
               />
-              
+
               {/* Tips Section */}
               <div className="classify__tips">
                 <h3 className="tips__title">📷 Photography Tips for Best Results</h3>
@@ -231,15 +231,15 @@ const Classify = () => {
           {currentStep === 'analyzing' && (
             <div className="classify__analysis-section">
               <div className="analysis__container">
-                <Loader 
-                  type="plant" 
-                  size="large" 
-                  text="Analyzing your plant image..." 
+                <Loader
+                  type="plant"
+                  size="large"
+                  text="Analyzing your plant image..."
                 />
-                
+
                 <div className="analysis__progress">
                   <div className="progress__bar">
-                    <div 
+                    <div
                       className="progress__fill"
                       style={{ width: `${analysisProgress}%` }}
                     ></div>
@@ -279,15 +279,15 @@ const Classify = () => {
                 onRetry={handleRetryAnalysis}
                 confidence={classificationResults?.[0]?.confidence || 0}
               />
-              
+
               <div className="classify__result-actions">
-                <button 
+                <button
                   className="result-action result-action--secondary"
                   onClick={handleStartNew}
                 >
                   Analyze Another Image
                 </button>
-                <button 
+                <button
                   className="result-action result-action--primary"
                   onClick={() => {
                     // Save to history functionality

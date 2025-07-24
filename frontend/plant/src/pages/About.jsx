@@ -111,12 +111,12 @@ const About = () => {
             <div className="overview-section">
               <h2>About Plant Disease Classifier</h2>
               <p className="overview-text">
-                Our AI-powered plant disease classification system is designed to help farmers, 
-                gardeners, and agricultural professionals quickly identify and treat plant diseases. 
-                Using cutting-edge machine learning technology, we provide accurate disease detection 
+                Our AI-powered plant disease classification system is designed to help farmers,
+                gardeners, and agricultural professionals quickly identify and treat plant diseases.
+                Using cutting-edge machine learning technology, we provide accurate disease detection
                 with detailed treatment recommendations.
               </p>
-              
+
               <div className="features-grid">
                 {features.map((feature, index) => (
                   <div key={index} className="feature-card">
@@ -141,7 +141,7 @@ const About = () => {
             <div className="technology-section">
               <h2>Our Technology</h2>
               <p className="section-intro">
-                We leverage state-of-the-art artificial intelligence and machine learning 
+                We leverage state-of-the-art artificial intelligence and machine learning
                 technologies to provide accurate plant disease detection.
               </p>
 
@@ -243,7 +243,7 @@ const About = () => {
             <div className="team-section">
               <h2>Meet Our Team</h2>
               <p className="section-intro">
-                Our diverse team combines expertise in agriculture, AI technology, and user experience 
+                Our diverse team combines expertise in agriculture, AI technology, and user experience
                 to create solutions that truly serve farming communities.
               </p>
 
@@ -296,8 +296,8 @@ const About = () => {
                   <div className="mission-icon">🌱</div>
                   <h3>Empowering Agriculture Through Technology</h3>
                   <p>
-                    We believe that every farmer deserves access to advanced diagnostic tools. 
-                    Our mission is to democratize plant disease detection using AI technology, 
+                    We believe that every farmer deserves access to advanced diagnostic tools.
+                    Our mission is to democratize plant disease detection using AI technology,
                     making it accessible to farming communities worldwide.
                   </p>
                 </div>
@@ -389,8 +389,8 @@ const About = () => {
           </div>
           <div className="hero__visual">
             <div className="hero__image-container">
-              <img 
-                src="/images/about-hero.jpg" 
+              <img
+                src="/images/about-hero.jpg"
                 alt="Agricultural technology and farming"
                 className="hero__image"
               />
@@ -426,7 +426,7 @@ const About = () => {
             <p className="contact__subtitle">
               Have questions or want to collaborate? We'd love to hear from you.
             </p>
-            
+
             <div className="contact__grid">
               <div className="contact__item">
                 <div className="contact__icon">📧</div>
@@ -434,14 +434,14 @@ const About = () => {
                 <p>info@plantcare.com</p>
                 <p>support@plantcare.com</p>
               </div>
-              
+
               <div className="contact__item">
                 <div className="contact__icon">📱</div>
                 <h3>Call Us</h3>
                 <p>+91 98765 43210</p>
                 <p>Mon-Fri: 9AM-6PM IST</p>
               </div>
-              
+
               <div className="contact__item">
                 <div className="contact__icon">📍</div>
                 <h3>Visit Us</h3>
@@ -449,7 +449,7 @@ const About = () => {
                 <p>Baripada, Odisha, India</p>
               </div>
             </div>
-            
+
             <div className="contact__cta">
               <a href="/classify" className="contact__button">
                 Try Our Platform

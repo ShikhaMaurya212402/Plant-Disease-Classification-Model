@@ -1,163 +1,223 @@
 /* History.css */
 .history-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px;
-    background: var(--bg-primary);
-    min-height: 100vh;
-  }
-  
-  .history-page--loading,
-  .history-page--error {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
-  }
-  
-  .history-page__container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  /* ── header ─────────────────────────────────── */
-  .history-page__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  
-  .header__content { flex: 1; }
-  
-  .history-page__title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin: 0 0 8px 0;
-  }
-  
-  .history-page__subtitle {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    margin: 0;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  background: var(--bg-primary);
+  min-height: 100vh;
+  margin-top: 4.5rem;
+}
+
+.history-page--loading,
+.history-page--error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.history-page__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ── header ─────────────────────────────────── */
+.history-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header__content {
+  flex: 1;
+}
+
+.history-page__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.history-page__subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.header__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.header__action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.header__action-button--primary {
+  background: var(--gradient-primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, .3);
+}
+
+.header__action-button--primary:hover {
+  background: var(--primary-green);
+  box-shadow: 0 6px 16px rgba(76, 175, 80, .4);
+}
+
+.header__action-button--secondary {
+  background: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+}
+
+.header__action-button--secondary:hover {
+  background: var(--primary-green);
+  color: #fff;
+}
+
+/* ── stats cards ────────────────────────────── */
+.history-page__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+.stat__card {
+  background: var(--bg-light-green);
+  border: 1px solid var(--primary-green-light);
+  border-radius: 12px;
+  padding: 24px;
+  flex: 1 1 180px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, .1);
+  transition: all .3s ease;
+}
+
+.stat__card:hover {
+  box-shadow: 0 6px 20px rgba(76, 175, 80, .2);
+  transform: translateY(-4px);
+}
+
+.stat__icon {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+}
+
+.stat__number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat__label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* ── list wrapper & tips ───────────────────── */
+.history-page__content {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .05);
+}
+
+.history-page__tips {
+  background: var(--bg-light-green);
+  border: 1px solid var(--primary-green-light);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.tips__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 24px;
+}
+
+.tips__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.tip__item {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.tip__item:hover {
+  border-color: var(--primary-green);
+  box-shadow: 0 4px 16px rgba(76, 175, 80, .1);
+  transform: translateY(-4px);
+}
+
+.tip__icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: var(--primary-green);
+}
+
+.tip__item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.tip__item p {
+  font-size: .95rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── responsive ────────────────────────────── */
+@media(max-width:768px) {
+
+  .history-page__header,
   .header__actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  .header__action-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
+
+  .history-page__stats {
+    grid-template-columns: 1fr 1fr;
   }
-  
-  .header__action-button--primary {
-    background: var(--gradient-primary);
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(76,175,80,.3);
+
+  .history-page__tips {
+    padding: 16px;
   }
-  
-  .header__action-button--primary:hover {
-    background: var(--primary-green);
-    box-shadow: 0 6px 16px rgba(76,175,80,.4);
+}
+
+@media(max-width:480px) {
+  .history-page__stats {
+    grid-template-columns: 1fr;
   }
-  
-  .header__action-button--secondary {
-    background: transparent;
-    color: var(--primary-green);
-    border: 2px solid var(--primary-green);
+
+  .history-page__container {
+    padding: 16px;
   }
-  
-  .header__action-button--secondary:hover {
-    background: var(--primary-green);
-    color: #fff;
-  }
-  
-  /* ── stats cards ────────────────────────────── */
-  .history-page__stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:24px; }
-  
-  .stat__card{
-    background:var(--bg-light-green);
-    border:1px solid var(--primary-green-light);
-    border-radius:12px;
-    padding:24px;
-    flex:1 1 180px;
-    display:flex;
-    align-items:center;
-    gap:16px;
-    box-shadow:0 4px 12px rgba(76,175,80,.1);
-    transition:all .3s ease;
-  }
-  
-  .stat__card:hover{
-    box-shadow:0 6px 20px rgba(76,175,80,.2);
-    transform:translateY(-4px);
-  }
-  
-  .stat__icon{font-size:2.5rem;color:var(--primary-green);}
-  .stat__number{font-size:2rem;font-weight:700;color:var(--text-primary);}
-  .stat__label{font-size:1rem;color:var(--text-secondary);}
-  
-  /* ── list wrapper & tips ───────────────────── */
-  .history-page__content{
-    background:var(--bg-secondary);
-    border-radius:16px;
-    padding:24px;
-    border:1px solid var(--border-color);
-    box-shadow:0 4px 16px rgba(0,0,0,.05);
-  }
-  
-  .history-page__tips{
-    background:var(--bg-light-green);
-    border:1px solid var(--primary-green-light);
-    border-radius:12px;
-    padding:24px;
-  }
-  
-  .tips__title{font-size:1.5rem;font-weight:600;color:var(--text-primary);margin:0 0 24px;}
-  
-  .tips__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
-  
-  .tip__item{
-    background:#fff;
-    border:1px solid var(--border-color);
-    border-radius:12px;
-    padding:20px;
-    text-align:center;
-    transition:all .3s ease;
-  }
-  
-  .tip__item:hover{
-    border-color:var(--primary-green);
-    box-shadow:0 4px 16px rgba(76,175,80,.1);
-    transform:translateY(-4px);
-  }
-  
-  .tip__icon{font-size:2.5rem;margin-bottom:12px;color:var(--primary-green);}
-  .tip__item h4{font-size:1.1rem;font-weight:600;color:var(--text-primary);margin:0 0 8px;}
-  .tip__item p{font-size:.95rem;color:var(--text-secondary);margin:0;line-height:1.5;}
-  
-  /* ── responsive ────────────────────────────── */
-  @media(max-width:768px){
-    .history-page__header,.header__actions{flex-direction:column;align-items:stretch;}
-    .history-page__stats{grid-template-columns:1fr 1fr;}
-    .history-page__tips{padding:16px;}
-  }
-  @media(max-width:480px){
-    .history-page__stats{grid-template-columns:1fr;}
-    .history-page__container{padding:16px;}
-  }
-  
+}
