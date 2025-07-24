@@ -103,7 +103,7 @@ const Home = () => {
         let current = 0;
         const target = targetStats[key];
         const increment = target / 100;
-        
+
         const timer = setInterval(() => {
           current += increment;
           if (current >= target) {
@@ -152,29 +152,29 @@ const Home = () => {
                 <span className="hero__title-highlight"> AI Precision</span>
               </h1>
               <p className="hero__description">
-                Upload a photo of your plant and get instant disease identification 
-                with detailed treatment recommendations. Help your plants thrive with 
+                Upload a photo of your plant and get instant disease identification
+                with detailed treatment recommendations. Help your plants thrive with
                 our advanced AI-powered diagnostic tool.
               </p>
               <div className="hero__actions">
                 <Link to="/classify" className="hero__cta-primary">
                   Start Classification
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z"/>
+                    <path d="M8 5v14l11-7z" />
                   </svg>
                 </Link>
                 <button className="hero__cta-secondary">
                   Watch Demo
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
                 </button>
               </div>
             </div>
             <div className="hero__visual">
               <div className="hero__image-container">
-                <img 
-                  src="/images/hero-plant.jpg" 
+                <img
+                  src="/images/hero-plant.jpg"
                   alt="Healthy plant with AI analysis overlay"
                   className="hero__image"
                 />
@@ -231,11 +231,11 @@ const Home = () => {
               Advanced technology meets practical plant care solutions
             </p>
           </div>
-          
+
           <div className="features__showcase">
             <div className="features__list">
               {features.map((feature, index) => (
-                <div 
+                <div
                   key={index}
                   className={`feature__item ${currentFeature === index ? 'feature__item--active' : ''}`}
                   onClick={() => setCurrentFeature(index)}
@@ -249,8 +249,8 @@ const Home = () => {
               ))}
             </div>
             <div className="features__visual">
-              <img 
-                src={features[currentFeature].image} 
+              <img
+                src={features[currentFeature].image}
                 alt={features[currentFeature].title}
                 className="features__image"
               />
@@ -268,7 +268,7 @@ const Home = () => {
               Get plant disease diagnosis in 4 simple steps
             </p>
           </div>
-          
+
           <div className="how-it-works__steps">
             {howItWorks.map((step, index) => (
               <div key={index} className="step__item">
@@ -283,7 +283,7 @@ const Home = () => {
                 {index < howItWorks.length - 1 && (
                   <div className="step__connector">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                      <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
                     </svg>
                   </div>
                 )}
@@ -302,28 +302,28 @@ const Home = () => {
               Trusted by farmers and gardeners across India
             </p>
           </div>
-          
+
           <div className="testimonials__grid">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="testimonial__item">
                 <div className="testimonial__rating">
                   {[...Array(5)].map((_, i) => (
-                    <svg 
-                      key={i} 
+                    <svg
+                      key={i}
                       className={`star ${i < testimonial.rating ? 'star--filled' : ''}`}
-                      width="16" 
-                      height="16" 
-                      viewBox="0 0 24 24" 
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
                       fill="currentColor"
                     >
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   ))}
                 </div>
                 <p className="testimonial__text">"{testimonial.text}"</p>
                 <div className="testimonial__author">
-                  <img 
-                    src={testimonial.avatar} 
+                  <img
+                    src={testimonial.avatar}
                     alt={testimonial.name}
                     className="testimonial__avatar"
                   />
