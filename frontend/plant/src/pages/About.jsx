@@ -4,90 +4,6 @@ import './About.css';
 const About = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
-  const teamMembers = [
-    {
-      name: 'Dr. Priya Sharma',
-      role: 'Lead AI Researcher',
-      image: '/images/team/priya-sharma.jpg',
-      bio: 'PhD in Plant Pathology with 10+ years experience in agricultural AI solutions.',
-      expertise: ['Machine Learning', 'Plant Pathology', 'Computer Vision']
-    },
-    {
-      name: 'Rajesh Kumar',
-      role: 'Senior Developer',
-      image: '/images/team/rajesh-kumar.jpg',
-      bio: 'Full-stack developer specializing in React and AI model deployment.',
-      expertise: ['React.js', 'Node.js', 'AI Integration']
-    },
-    {
-      name: 'Dr. Sunita Patel',
-      role: 'Plant Disease Expert',
-      image: '/images/team/sunita-patel.jpg',
-      bio: 'Agricultural scientist with expertise in crop disease management.',
-      expertise: ['Disease Diagnosis', 'Treatment Plans', 'Agriculture']
-    },
-    {
-      name: 'Amit Singh',
-      role: 'UI/UX Designer',
-      image: '/images/team/amit-singh.jpg',
-      bio: 'Designer focused on creating intuitive agricultural technology interfaces.',
-      expertise: ['UI Design', 'User Research', 'Accessibility']
-    }
-  ];
-
-  const features = [
-    {
-      icon: '🔬',
-      title: 'Advanced AI Technology',
-      description: 'Our deep learning models are trained on over 100,000 plant images from agricultural institutions worldwide.',
-      details: ['Convolutional Neural Networks', 'Transfer Learning', 'Real-time Processing']
-    },
-    {
-      icon: '📱',
-      title: 'User-Friendly Interface',
-      description: 'Designed for farmers, gardeners, and agricultural professionals with intuitive navigation.',
-      details: ['Mobile Responsive', 'Offline Capability', 'Multi-language Support']
-    },
-    {
-      icon: '🌍',
-      title: 'Global Disease Database',
-      description: 'Comprehensive database covering diseases across different climates and geographical regions.',
-      details: ['150+ Disease Types', 'Regional Variations', 'Seasonal Patterns']
-    },
-    {
-      icon: '💊',
-      title: 'Treatment Recommendations',
-      description: 'Evidence-based treatment plans with both organic and chemical solutions.',
-      details: ['Organic Solutions', 'Chemical Treatments', 'Prevention Methods']
-    }
-  ];
-
-  const milestones = [
-    {
-      year: '2023',
-      title: 'Project Inception',
-      description: 'Started research and development with focus on Indian agricultural needs.',
-      icon: '🌱'
-    },
-    {
-      year: '2024',
-      title: 'AI Model Development',
-      description: 'Completed training of our core disease detection models with 94% accuracy.',
-      icon: '🧠'
-    },
-    {
-      year: '2024',
-      title: 'Beta Testing',
-      description: 'Successful testing with 500+ farmers across Odisha and neighboring states.',
-      icon: '🧪'
-    },
-    {
-      year: '2025',
-      title: 'Public Launch',
-      description: 'Official launch of the platform with comprehensive disease database.',
-      icon: '🚀'
-    }
-  ];
 
   const stats = [
     { number: '100,000+', label: 'Training Images', icon: '📸' },
@@ -237,54 +153,7 @@ const About = () => {
           </div>
         );
 
-      case 'team':
-        return (
-          <div className="tab-content">
-            <div className="team-section">
-              <h2>Meet Our Team</h2>
-              <p className="section-intro">
-                Our diverse team combines expertise in agriculture, AI technology, and user experience
-                to create solutions that truly serve farming communities.
-              </p>
-
-              <div className="team-grid">
-                {teamMembers.map((member, index) => (
-                  <div key={index} className="team-card">
-                    <div className="team-card__image">
-                      <img src={member.image} alt={member.name} />
-                    </div>
-                    <div className="team-card__content">
-                      <h3 className="team-card__name">{member.name}</h3>
-                      <div className="team-card__role">{member.role}</div>
-                      <p className="team-card__bio">{member.bio}</p>
-                      <div className="team-card__expertise">
-                        {member.expertise.map((skill, i) => (
-                          <span key={i} className="expertise-tag">{skill}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="timeline">
-                <h3>Our Journey</h3>
-                <div className="timeline-container">
-                  {milestones.map((milestone, index) => (
-                    <div key={index} className="timeline-item">
-                      <div className="timeline-item__icon">{milestone.icon}</div>
-                      <div className="timeline-item__content">
-                        <div className="timeline-item__year">{milestone.year}</div>
-                        <h4 className="timeline-item__title">{milestone.title}</h4>
-                        <p className="timeline-item__description">{milestone.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        );
+     
 
       case 'mission':
         return (
@@ -418,38 +287,6 @@ const About = () => {
         <div className="about-page__content">
           {renderTabContent()}
         </div>
-
-        {/* Contact Section */}
-        <div className="about-page__contact">
-          <div className="contact__container">
-            <h2 className="contact__title">Get In Touch</h2>
-            <p className="contact__subtitle">
-              Have questions or want to collaborate? We'd love to hear from you.
-            </p>
-
-            <div className="contact__grid">
-              <div className="contact__item">
-                <div className="contact__icon">📧</div>
-                <h3>Email Us</h3>
-                <p>info@plantcare.com</p>
-                <p>support@plantcare.com</p>
-              </div>
-
-              <div className="contact__item">
-                <div className="contact__icon">📱</div>
-                <h3>Call Us</h3>
-                <p>+91 98765 43210</p>
-                <p>Mon-Fri: 9AM-6PM IST</p>
-              </div>
-
-              <div className="contact__item">
-                <div className="contact__icon">📍</div>
-                <h3>Visit Us</h3>
-                <p>Agricultural Technology Center</p>
-                <p>Baripada, Odisha, India</p>
-              </div>
-            </div>
-
             <div className="contact__cta">
               <a href="/classify" className="contact__button">
                 Try Our Platform
