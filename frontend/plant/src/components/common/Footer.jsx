@@ -118,38 +118,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div className="footer__section">
-            <h3 className="footer__title">Contact</h3>
-            <div className="footer__contact">
-              <p className="footer__contact-item">
-                <span className="footer__contact-icon">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4 4h16v2H4V4zm0 14h16v2H4v-2zm0-7h16v2H4v-2z" />
-                  </svg>
-                </span>
-                support@plantcare.com
-              </p>
-              <p className="footer__contact-item">
-                <span className="footer__contact-icon">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.55.57 1 1 0 011 1v3.36a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.36a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.21 1.11l-2.1 2.13z" />
-                  </svg>
-                </span>
-                +91 98765 43210
-              </p>
-              <p className="footer__contact-item">
-                <span className="footer__contact-icon">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1114.5 9 2.5 2.5 0 0112 11.5z" />
-                  </svg>
-                </span>
-                Baripada, Odisha, India
-              </p>
-            </div>
-          </div>
-        </div>
-
+         
         {/* Footer Bottom */}
         <div className="footer__bottom">
           <div className="footer__bottom-content">
